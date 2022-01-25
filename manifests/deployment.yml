@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: nvijayasekarvibetest 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nvijayasekarvibetest
+  template:
+    metadata:
+      labels:
+        app: nvijayasekarvibetest 
+    spec:
+      containers:
+        - name: nvijayasekarvibetest 
+          image: vibemagentoacr.azurecr.io/nvijayasekarvibetest
+          ports:
+          - containerPort: 80
